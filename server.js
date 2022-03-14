@@ -81,7 +81,7 @@ const resolvers = {
   },
 };
 
-async function startServer() {
+const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
@@ -101,6 +101,6 @@ async function startServer() {
   await new Promise((r) => app.listen({ port: 4000 }, r));
 
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
-}
+};
 
 startServer();
