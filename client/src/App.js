@@ -1,10 +1,6 @@
-const {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-} = require("@apollo/client");
-const { createUploadLink } = require("apollo-upload-client");
-const { FileUpload } = require("./containers");
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import { createUploadLink } from "apollo-upload-client";
+import { FileUpload } from "./containers";
 
 const client = new ApolloClient({
   link: createUploadLink({

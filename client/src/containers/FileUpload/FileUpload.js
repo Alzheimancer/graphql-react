@@ -1,4 +1,4 @@
-const { useMutation, gql } = require("@apollo/client");
+import { useMutation, gql } from "@apollo/client";
 const UPLOAD_FILE = gql`
   mutation fileUpload($file: [Upload]!) {
     fileUpload(file: $file) {
